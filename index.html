@@ -19,6 +19,12 @@
         #seek-bar:hover {
             opacity: 1;
         }
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
   </style>
  </head>
  <body class="bg-gray-800 text-white">
@@ -32,38 +38,63 @@
        Music App
       </h1>
      </div>
+     <div>
+      <button class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm" id="show-home">
+       Home
+      </button>
+      <button class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm" id="show-playlists">
+       Playlists
+      </button>
+      <a class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm" href="more.html">
+       More Music
+      </a>
+     </div>
     </div>
    </header>
-   <section class="mb-8">
+   <section class="tab active" id="home">
+    <div class="bg-gray-700 p-6 rounded-lg mb-8 text-center">
+     <h2 class="text-2xl font-bold mb-4">
+      Welcome to Music App
+     </h2>
+     <p class="mb-4">
+      Discover new music, create playlists, and enjoy your favorite tracks.
+     </p>
+     <button class="bg-blue-500 text-white px-3 py-1 rounded-full text-sm mb-4">
+      Get Started
+     </button>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+     <div class="bg-gray-700 p-6 rounded-lg mb-8">
+      <h2 class="text-2xl font-bold mb-4">
+       Recently Added
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="recent-tracks">
+       <!-- Recent tracks will be dynamically added here -->
+      </div>
+     </div>
+     <div class="bg-gray-700 p-6 rounded-lg mb-8">
+      <h2 class="text-2xl font-bold mb-4">
+       All Tracks
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="all-tracks-list">
+       <!-- All tracks items will be dynamically added here -->
+      </div>
+     </div>
+    </div>
+   </section>
+   <section class="tab" id="playlists">
     <h2 class="text-2xl font-bold mb-4">
      Playlists
     </h2>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="track-list">
+     <!-- Playlist items will be dynamically added here -->
     </div>
    </section>
-   <main class="flex flex-col lg:flex-row">
-    <aside class="w-full lg:w-1/4 bg-gray-700 p-4 rounded-lg mb-4 lg:mb-0 lg:mr-4">
-     <div class="flex justify-between items-center mb-4">
-      <h2 class="text-2xl font-bold">
-       All Music
-      </h2>
-     </div>
-     <ul class="space-y-4" id="all-music-list">
-     </ul>
-    </aside>
-    <section class="w-full lg:w-3/4">
-     <h2 class="text-2xl font-bold mb-4">
-      Top Tracks
-     </h2>
-     <ul class="space-y-4" id="top-tracks-list">
-     </ul>
-    </section>
-   </main>
   </div>
   <footer class="fixed bottom-0 left-0 right-0 bg-gray-900 p-4">
    <div class="container mx-auto flex flex-col md:flex-row items-center">
     <div class="flex items-center mb-4 md:mb-0">
-     <img alt="Thumbnail of the currently playing track" class="w-12 h-12 object-cover rounded-lg mr-4" height="50" id="current-track-thumbnail" src="https://storage.googleapis.com/a1aa/image/RF935ps2hqAX0H3S0C6Tq62RRY_ltlMO7LIRIo06rRM.jpg" width="50"/>
+     <img alt="Thumbnail of the currently playing track" class="w-12 h-12 object-cover rounded-lg mr-4" height="50" id="current-track-thumbnail" src="https://storage.googleapis.com/a1aa/image/yekZZKjYLG1CscMbj_qHTyP4k-B_xh1Dx_hObPWQLaA.jpg" width="50"/>
      <div>
       <h3 class="text-xl font-bold" id="current-track-title">
        Currently Playing Track
@@ -103,156 +134,187 @@
   </audio>
   <script>
    const audioPlayer = document.getElementById('audio-player');
-        const audioSource = document.getElementById('audio-source');
-        const playPauseButton = document.getElementById('play-pause-button');
-        const currentTrackTitle = document.getElementById('current-track-title');
-        const currentTrackArtist = document.getElementById('current-track-artist');
-        const currentTrackThumbnail = document.getElementById('current-track-thumbnail');
-        const seekBar = document.getElementById('seek-bar');
-        const currentTime = document.getElementById('current-time');
-        const duration = document.getElementById('duration');
+    const audioSource = document.getElementById('audio-source');
+    const playPauseButton = document.getElementById('play-pause-button');
+    const currentTrackTitle = document.getElementById('current-track-title');
+    const currentTrackArtist = document.getElementById('current-track-artist');
+    const currentTrackThumbnail = document.getElementById('current-track-thumbnail');
+    const seekBar = document.getElementById('seek-bar');
+    const currentTime = document.getElementById('current-time');
+    const duration = document.getElementById('duration');
 
-        let isPlaying = false;
-        let currentTrackIndex = 0;
-        let tracks = [];
+    let isPlaying = false;
+    let currentTrackIndex = 0;
+    let tracks = [];
 
-        async function loadTracks() {
-            try {
-                const response = await fetch('tracks.json');
-                tracks = await response.json();
-                displayTracks();
-            } catch (error) {
-                console.error("Error loading tracks:", error);
-            }
+    async function loadTracks() {
+        try {
+            const response = await fetch('tracks.json');
+            tracks = await response.json();
+            displayTracks();
+            displayRecentTracks();
+        } catch (error) {
+            console.error("Error loading tracks:", error);
         }
+    }
 
-        function displayTracks() {
-            const trackList = document.getElementById('track-list');
-            const allMusicList = document.getElementById('all-music-list');
-            const topTracksList = document.getElementById('top-tracks-list');
+    function displayTracks() {
+        const allTracksList = document.getElementById('all-tracks-list');
 
-            tracks.forEach((track, index) => {
-                const trackDiv = document.createElement('div');
-                trackDiv.className = 'bg-gray-600 p-4 rounded-lg';
-                trackDiv.innerHTML = `
-                    <img alt="Thumbnail of ${track.title}" class="w-full h-48 object-cover rounded-lg mb-4" height="300" src="${track.thumbnail}" width="300"/>
-                    <h3 class="text-xl font-bold">${track.title}</h3>
-                    <p class="text-gray-400">${track.artist}</p>
-                    <button class="text-gray-400 hover:text-white play-button mt-2" data-track="${index}">
-                        <i class="fas fa-play"></i>
-                    </button>
-                `;
-                trackList.appendChild(trackDiv);
+        allTracksList.innerHTML = ''; // Clear previous content
 
-                const allMusicItem = document.createElement('li');
-                allMusicItem.className = 'bg-gray-600 p-4 rounded-lg flex items-center justify-between';
-                allMusicItem.innerHTML = `
-                    <div class="flex items-center">
-                        <img alt="Thumbnail of ${track.title}" class="w-12 h-12 object-cover rounded-lg mr-4" height="50" src="${track.thumbnail}" width="50"/>
-                        <div>
-                            <h3 class="text-xl font-bold">${track.title}</h3>
-                            <p class="text-gray-400">${track.artist}</p>
-                        </div>
-                    </div>
-                    <button class="text-gray-400 hover:text-white play-button" data-track="${index}">
-                        <i class="fas fa-play"></i>
-                    </button>
-                `;
-                allMusicList.appendChild(allMusicItem);
+        // Limita a 6 tracce
+        const limitedTracks = tracks.slice(0, 6);
 
-                const topTrackItem = document.createElement('li');
-                topTrackItem.className = 'bg-gray-700 p-4 rounded-lg flex items-center justify-between';
-                topTrackItem.innerHTML = `
-                    <div class="flex items-center">
-                        <img alt="Thumbnail of ${track.title}" class="w-12 h-12 object-cover rounded-lg mr-4" height="50" src="${track.thumbnail}" width="50"/>
-                        <div>
-                            <h3 class="text-xl font-bold">${track.title}</h3>
-                            <p class="text-gray-400">${track.artist}</p>
-                        </div>
-                    </div>
-                    <button class="text-gray-400 hover:text-white play-button" data-track="${index}">
-                        <i class="fas fa-play"></i>
-                    </button>
-                `;
-                topTracksList.appendChild(topTrackItem);
-            });
-
-            const playButtons = document.querySelectorAll('.play-button');
-            playButtons.forEach((button) => {
-                button.addEventListener('click', (event) => {
-                    const index = event.target.closest('button').dataset.track;
-                    currentTrackIndex = index;
-                    loadTrack(currentTrackIndex);
-                });
-            });
-        }
-
-        function loadTrack(index) {
-            if (isPlaying) {
-                audioPlayer.pause();
-                isPlaying = false;
-                playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
-            }
-
-            const track = tracks[index];
-            audioSource.src = track.src;
-            currentTrackTitle.textContent = track.title;
-            currentTrackArtist.textContent = track.artist;
-            currentTrackThumbnail.src = track.thumbnail;
-            audioPlayer.load();
-            updateDuration();
-            playPauseTrack();
-        }
-
-        function playPauseTrack() {
-            if (isPlaying) {
-                audioPlayer.pause();
-                playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
-            } else {
-                audioPlayer.play().catch(error => {
-                    console.error("Error playing audio:", error);
-                });
-                playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
-            }
-            isPlaying = !isPlaying;
-        }
-
-        function updateSeekBar() {
-            const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
-            seekBar.value = progress;
-            currentTime.textContent = formatTime(audioPlayer.currentTime);
-        }
-
-        function formatTime(seconds) {
-            const minutes = Math.floor(seconds / 60);
-            const secs = Math.floor(seconds % 60);
-            return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-        }
-
-        function updateDuration() {
-            duration.textContent = formatTime(audioPlayer.duration);
-        }
-
-        function nextTrack() {
-            currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
-            loadTrack(currentTrackIndex);
-        }
-
-        function prevTrack() {
-            currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
-            loadTrack(currentTrackIndex);
-        }
-
-        playPauseButton.addEventListener('click', playPauseTrack);
-        document.getElementById('next-button').addEventListener('click', nextTrack);
-        document.getElementById('prev-button').addEventListener('click', prevTrack);
-        audioPlayer.addEventListener('timeupdate', updateSeekBar);
-        audioPlayer.addEventListener('loadedmetadata', updateDuration);
-        seekBar.addEventListener('input', () => {
-            audioPlayer.currentTime = (seekBar.value / 100) * audioPlayer.duration;
+        limitedTracks.forEach((track, index) => {
+            const trackDiv = document.createElement('div');
+            trackDiv.className = 'bg-gray-600 p-4 rounded-lg';
+            trackDiv.innerHTML = `
+                <img alt="Thumbnail of ${track.title}" class="w-full h-32 object-cover rounded-lg mb-4" height="128" src="${track.thumbnail}" width="300"/>
+                <h3 class="text-xl font-bold">${track.title}</h3>
+                <p class="text-gray-400">${track.artist}</p>
+                <button class="text-gray-400 hover:text-white play-button mt-2" data-track="${index}">
+                    <i class="fas fa-play"></i>
+                </button>
+            `;
+            allTracksList.appendChild(trackDiv);
         });
 
-        loadTracks();
+        const playButtons = document.querySelectorAll('.play-button');
+        playButtons.forEach((button) => {
+            button.addEventListener('click', (event) => {
+                const index = parseInt(event.target.closest('button').dataset.track);
+                currentTrackIndex = index;
+                loadTrack(currentTrackIndex);
+            });
+        });
+    }
+
+    function displayRecentTracks() {
+        const recentTracksContainer = document.getElementById('recent-tracks');
+        recentTracksContainer.innerHTML = '';
+        const recentTracks = tracks.slice(-6).reverse();
+
+        recentTracks.forEach((track, index) => {
+            const trackDiv = document.createElement('div');
+            trackDiv.className = 'bg-gray-600 p-4 rounded-lg';
+            trackDiv.innerHTML = `
+                <img alt="Thumbnail of ${track.title}" class="w-full h-32 object-cover rounded-lg mb-4" height="128" src="${track.thumbnail}" width="300"/>
+                <h3 class="text-xl font-bold">${track.title}</h3>
+                <p class="text-gray-400">${track.artist}</p>
+                <button class="text-gray-400 hover:text-white play-button mt-2" data-track="${tracks.indexOf(track)}">
+                    <i class="fas fa-play"></i>
+                </button>
+            `;
+            recentTracksContainer.appendChild(trackDiv);
+        });
+    }
+
+    function loadTrack(index) {
+        if (isPlaying) {
+            audioPlayer.pause();
+            isPlaying = false;
+            playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
+        }
+
+        const track = tracks[index];
+        audioSource.src = track.src;
+        currentTrackTitle.textContent = track.title;
+        currentTrackArtist.textContent = track.artist;
+        currentTrackThumbnail.src = track.thumbnail;
+        audioPlayer.load();
+        updateDuration();
+        playPauseTrack();
+    }
+
+    function playPauseTrack() {
+        if (isPlaying) {
+            audioPlayer.pause();
+            playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
+        } else {
+            audioPlayer.play().catch(error => {
+                console.error("Error playing audio:", error);
+            });
+            playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+        }
+        isPlaying = !isPlaying;
+    }
+
+    function updateSeekBar() {
+        const progress = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        seekBar.value = progress;
+        currentTime.textContent = formatTime(audioPlayer.currentTime);
+    }
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    function updateDuration() {
+        duration.textContent = formatTime(audioPlayer.duration);
+    }
+
+    function nextTrack() {
+        currentTrackIndex = (currentTrackIndex + 1) % tracks.length;
+        loadTrack(currentTrackIndex);
+    }
+
+    function prevTrack() {
+        currentTrackIndex = (currentTrackIndex - 1 + tracks.length) % tracks.length;
+        loadTrack(currentTrackIndex);
+    }
+
+    function saveAudioState() {
+        localStorage.setItem('currentTrackIndex', currentTrackIndex);
+        localStorage.setItem('currentTime', audioPlayer.currentTime);
+        localStorage.setItem('isPlaying', isPlaying);
+    }
+
+    function restoreAudioState() {
+        const savedTrackIndex = localStorage.getItem('currentTrackIndex');
+        const savedTime = localStorage.getItem('currentTime');
+        const savedIsPlaying = localStorage.getItem('isPlaying');
+
+        if (savedTrackIndex !== null) {
+            currentTrackIndex = parseInt(savedTrackIndex);
+            loadTrack(currentTrackIndex);
+            if (savedTime !== null) {
+                audioPlayer.currentTime = parseFloat(savedTime);
+            }
+            if (savedIsPlaying === 'true') {
+                isPlaying = true;
+                audioPlayer.play();
+                playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+            }
+        }
+    }
+
+    window.addEventListener('beforeunload', saveAudioState);
+    window.addEventListener('load', restoreAudioState);
+
+    playPauseButton.addEventListener('click', playPauseTrack);
+    document.getElementById('next-button').addEventListener('click', nextTrack);
+    document.getElementById('prev-button').addEventListener('click', prevTrack);
+    audioPlayer.addEventListener('timeupdate', updateSeekBar);
+    audioPlayer.addEventListener('loadedmetadata', updateDuration);
+    audioPlayer.addEventListener('ended', nextTrack); // Aggiunto per riprodurre la prossima canzone
+    seekBar.addEventListener('input', () => {
+        audioPlayer.currentTime = (seekBar.value / 100) * audioPlayer.duration;
+    });
+
+    document.getElementById('show-home').addEventListener('click', () => {
+        document.getElementById('home').classList.add('active');
+        document.getElementById('playlists').classList.remove('active');
+    });
+
+    document.getElementById('show-playlists').addEventListener('click', () => {
+        document.getElementById('playlists').classList.add('active');
+        document.getElementById('home').classList.remove('active');
+    });
+
+    loadTracks();
   </script>
  </body>
 </html>
