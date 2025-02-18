@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
@@ -9,6 +10,8 @@
   <style>
     body {
       font-family: 'Poppins', sans-serif;
+      min-height: 100vh; /* Ensure content stretches to fill the screen */
+      position: relative; /*  for absolute positioning of the footer */
     }
     #seek-bar {
       opacity: 0.7;
@@ -52,10 +55,17 @@
         transition: transform 0.3s ease-in-out;
       }
     }
+    #search-input {
+      transition: background-color 0.3s ease;
+    }
+    #search-input:focus {
+      background-color: #4a5568; /* Colore di sfondo più chiaro quando è in focus */
+      outline: none; /* Rimuove il contorno predefinito */
+    }
   </style>
 </head>
 <body class="bg-gray-900 text-white">
-  <div class="container mx-auto p-4 pb-40 md:pb-32">
+  <div class="container mx-auto p-4" style="margin-bottom: 220px;">  <!-- Adjusted margin-bottom -->
     <header class="bg-gray-800 p-4 rounded-lg mb-8 shadow-lg fade-in hidden md:block">
       <div class="flex justify-between items-center">
         <div class="flex items-center space-x-2">
@@ -71,7 +81,7 @@
     </header>
     <section class="tab active" id="home">
       <div class="bg-gray-800 p-6 rounded-lg mb-8 text-center shadow-lg slide-in">
-        <h2 class="text-2xl font-bold mb-4">Welcome to Music App</h2>
+        <h2 class="text-2xl font-bold mb-9">Welcome to Musico</h2>
         <p class="mb-4">Discover new music, create playlists, and enjoy your favorite tracks.</p>
         <button class="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-600 transition">Get Started</button>
       </div>
@@ -98,6 +108,9 @@
     </section>
     <section class="tab" id="more-music">
       <h2 class="text-2xl font-bold mb-4 slide-in">All Tracks</h2>
+      <div class="mb-4">
+        <input type="text" id="search-input" placeholder="Search for a song..." class="w-full p-2 rounded-lg bg-gray-700 text-white" />
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4" id="more-tracks-list">
         <!-- More tracks items will be dynamically added here -->
       </div>
@@ -275,37 +288,80 @@
       });
     }
 
-    function loadTrack(index) {
-      if (isPlaying) {
-        audioPlayer.pause();
-        isPlaying = false;
-        playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
-      }
+    function filterTracks() {
+      const searchInput = document.getElementById('search-input').value.toLowerCase();
+      const moreTracksList = document.getElementById('more-tracks-list');
+      
+      // Pulisci la lista esistente
+      moreTracksList.innerHTML = '';
 
-      const track = tracks[index];
-      audioSource.src = track.src;
-      currentTrackTitle.textContent = track.title;
-      currentTrackArtist.textContent = track.artist;
-      currentTrackThumbnail.src = track.thumbnail;
-      audioPlayer.load();
-      updateDuration();
-      playPauseTrack();
-    }
+      // Filtra i brani in base all'input
+      const filteredTracks = tracks.filter(track => 
+        track.title.toLowerCase().includes(searchInput)
+      );
 
-    function playPauseTrack() {
-      if (isPlaying) {
-        audioPlayer.pause();
-        playPauseButton.innerHTML = '<i class="fas fa-play"></i>';
-        updatePlayPauseButton();
-      } else {
-        audioPlayer.play().catch(error => {
-          console.error("Error playing audio:", error);
+      // Mostra i brani filtrati
+      filteredTracks.forEach((track, index) => {
+        const trackDiv = document.createElement('div');
+        trackDiv.className = 'bg-gray-700 p-4 rounded-lg flex items-center justify-between';
+        trackDiv.innerHTML = `
+          <div class="flex items-center">
+            <img alt="Thumbnail of ${track.title}" class="w-12 h-12 object-cover rounded-lg mr-4" height="50" src="${track.thumbnail}" width="50"/>
+            <div>
+              <h3 class="text-xl font-bold">${track.title}</h3>
+              <p class="text-gray-400">${track.artist}</p>
+            </div>
+          </div>
+          <button class="text-gray-400 hover:text-white play-button" data-track="${index}">
+            <i class="fas fa-play"></i>
+          </button>
+        `;
+        moreTracksList.appendChild(trackDiv);
+      });
+
+      // Aggiungi gli eventi ai pulsanti di riproduzione
+      const playButtons = document.querySelectorAll('.play-button');
+      playButtons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          const index = parseInt(event.target.closest('button').dataset.track);
+          currentTrackIndex = index;
+          loadTrack(currentTrackIndex);
         });
-        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>';
-        updatePlayPauseButton();
-      }
-      isPlaying = !isPlaying;
+      });
     }
+
+    // Aggiungi un evento per il campo di input
+    document.getElementById('search-input').addEventListener('input', filterTracks);
+
+    function loadTrack(index) {
+  if (isPlaying) {
+    audioPlayer.pause();
+    isPlaying = false;
+    playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Cambia a pausa quando si carica un nuovo brano
+  }
+
+  const track = tracks[index];
+  audioSource.src = track.src;
+  currentTrackTitle.textContent = track.title;
+  currentTrackArtist.textContent = track.artist;
+  currentTrackThumbnail.src = track.thumbnail;
+  audioPlayer.load();
+  updateDuration();
+  playPauseTrack(); // Inizializza la riproduzione del brano
+}
+
+function playPauseTrack() {
+  if (isPlaying) {
+    audioPlayer.pause();
+    playPauseButton.innerHTML = '<i class="fas fa-play"></i>'; // Mostra play quando si mette in pausa
+  } else {
+    audioPlayer.play().catch(error => {
+      console.error("Error playing audio:", error);
+    });
+    playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Mostra pausa quando si riproduce
+  }
+  isPlaying = !isPlaying; // Inverti lo stato di riproduzione
+}
 
     function updatePlayPauseButton() {
       const playButtons = document.querySelectorAll('.play-button');
@@ -397,28 +453,28 @@
     document.getElementById('show-more-music').addEventListener('click', () => {
       document.getElementById('more-music').classList.add('active');
       document.getElementById('home').classList.remove('active');
-            document.getElementById('home').classList.remove('active');
-          });
-      
-          document.getElementById('show-home-mobile').addEventListener('click', () => {
-            document.getElementById('home').classList.add('active');
-            document.getElementById('playlists').classList.remove('active');
-            document.getElementById('more-music').classList.remove('active');
-          });
-      
-          document.getElementById('show-playlists-mobile').addEventListener('click', () => {
-            document.getElementById('playlists').classList.add('active');
-            document.getElementById('home').classList.remove('active');
-            document.getElementById('more-music').classList.remove('active');
-          });
-      
-          document.getElementById('show-more-music-mobile').addEventListener('click', () => {
-            document.getElementById('more-music').classList.add('active');
-            document.getElementById('home').classList.remove('active');
-            document.getElementById('playlists').classList.remove('active');
-          });
-      
-          loadTracks();
-        </script>
-      </body>
-      </html>
+      document.getElementById('playlists').classList.remove('active');
+    });
+
+    document.getElementById('show-home-mobile').addEventListener('click', () => {
+      document.getElementById('home').classList.add('active');
+      document.getElementById('playlists').classList.remove('active');
+      document.getElementById('more-music').classList.remove('active');
+    });
+
+    document.getElementById('show-playlists-mobile').addEventListener('click', () => {
+      document.getElementById('playlists').classList.add('active');
+      document.getElementById('home').classList.remove('active');
+      document.getElementById('more-music').classList.remove(' active');
+    });
+
+    document.getElementById('show-more-music-mobile').addEventListener('click', () => {
+      document.getElementById('more-music').classList.add('active');
+      document.getElementById('home').classList.remove('active');
+      document.getElementById('playlists').classList.remove('active');
+    });
+
+    loadTracks();
+  </script>
+</body>
+</html>
