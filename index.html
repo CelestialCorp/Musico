@@ -188,7 +188,6 @@
 
     function displayTracks() {
       const allTracksList = document.getElementById('all-tracks-list');
-
       allTracksList.innerHTML = ''; // Clear previous content
 
       // Limita a 6 tracce
@@ -197,7 +196,7 @@
       limitedTracks.forEach((track, index) => {
         const trackDiv = document.createElement('div');
         trackDiv.className = 'bg-gray-700 p-2 md:p-4 rounded-lg shadow-lg slide-in hover-card cursor-pointer';
-        trackDiv.dataset.track = index;
+        trackDiv.dataset.track = index; // Assicurati che l'indice sia corretto
         trackDiv.innerHTML = `
           <div class="relative">
             <img alt="Thumbnail of ${track.title}" class="w-full h-24 md:h-32 object-cover rounded-lg mb-2 md:mb-4" height="128" src="${track.thumbnail}" width="300"/>
@@ -209,15 +208,12 @@
           <p class="text-xs md:text-base text-gray-400">${track.artist}</p>
         `;
         allTracksList.appendChild(trackDiv);
-      });
-
-      const trackCards = document.querySelectorAll('.hover-card');
-      trackCards.forEach((card) => {
-        card.addEventListener('click', (event) => {
-          const index = parseInt(card.dataset.track);
-          currentTrackIndex = index;
-          loadTrack(currentTrackIndex);
-          updatePlayPauseButton(card);
+        
+        // Aggiungi l'evento di clic per caricare la canzone
+        trackDiv.addEventListener('click', () => {
+          currentTrackIndex = index; // Imposta l'indice della canzone corrente
+          loadTrack(currentTrackIndex); // Carica la canzone selezionata
+          updatePlayPauseButton(trackDiv); // Aggiorna il pulsante di riproduzione
         });
       });
     }
@@ -227,7 +223,7 @@
       recentTracksContainer.innerHTML = '';
       const recentTracks = tracks.slice(-6).reverse();
 
-      recentTracks.forEach((track, index) => {
+      recentTracks.forEach((track) => {
         const trackDiv = document.createElement('div');
         trackDiv.className = 'bg-gray-700 p-2 md:p-4 rounded-lg shadow-lg slide-in hover-card cursor-pointer';
         trackDiv.dataset.track = tracks.indexOf(track);
@@ -242,22 +238,18 @@
           <p class="text-xs md:text-base text-gray-400">${track.artist}</p>
         `;
         recentTracksContainer.appendChild(trackDiv);
-      });
-
-      const trackCards = document.querySelectorAll('.hover-card');
-      trackCards.forEach((card) => {
-        card.addEventListener('click', (event) => {
-          const index = parseInt(card.dataset.track);
-          currentTrackIndex = index;
-          loadTrack(currentTrackIndex);
-          updatePlayPauseButton(card);
+        
+        // Aggiungi l'evento di clic per caricare la canzone
+        trackDiv.addEventListener('click', () => {
+          currentTrackIndex = tracks.indexOf(track); // Imposta l'indice della canzone corrente
+          loadTrack(currentTrackIndex); // Carica la canzone selezionata
+          updatePlayPauseButton(trackDiv); // Aggiorna il pulsante di riproduzione
         });
       });
     }
 
     function displayMoreTracks() {
       const moreTracksList = document.getElementById('more-tracks-list');
-
       moreTracksList.innerHTML = ''; // Clear previous content
 
       tracks.forEach((track, index) => {
@@ -276,14 +268,12 @@
           </button>
         `;
         moreTracksList.appendChild(trackDiv);
-      });
 
-      const playButtons = document.querySelectorAll('.play-button');
-      playButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-          const index = parseInt(event.target.closest('button').dataset.track);
-          currentTrackIndex = index;
-          loadTrack(currentTrackIndex);
+        // Aggiungi l'evento di clic per caricare la canzone
+        trackDiv.querySelector('.play-button').addEventListener('click', (event) => {
+          event.stopPropagation(); // Evita che il clic sul pulsante attivi anche il clic sul div
+          currentTrackIndex = index; // Imposta l'indice della canzone corrente
+          loadTrack(currentTrackIndex); // Carica la canzone selezionata
         });
       });
     }
@@ -312,20 +302,17 @@
               <p class="text-gray-400">${track.artist}</p>
             </div>
           </div>
-          <button class="text-gray-400 hover:text-white play-button" data-track="${index}">
+          <button class="text-gray-400 hover:text-white play-button" data-track="${tracks.indexOf(track)}">
             <i class="fas fa-play"></i>
           </button>
         `;
         moreTracksList.appendChild(trackDiv);
-      });
 
-      // Aggiungi gli eventi ai pulsanti di riproduzione
-      const playButtons = document.querySelectorAll('.play-button');
-      playButtons.forEach((button) => {
-        button.addEventListener('click', (event) => {
-          const index = parseInt(event.target.closest('button').dataset.track);
-          currentTrackIndex = index;
-          loadTrack(currentTrackIndex);
+        // Aggiungi l'evento di clic per caricare la canzone
+        trackDiv.querySelector('.play-button').addEventListener('click', (event) => {
+          event.stopPropagation(); // Evita che il clic sul pulsante attivi anche il clic sul div
+          currentTrackIndex = tracks.indexOf(track); // Imposta l'indice della canzone corrente
+          loadTrack(currentTrackIndex); // Carica la canzone selezionata
         });
       });
     }
@@ -334,34 +321,34 @@
     document.getElementById('search-input').addEventListener('input', filterTracks);
 
     function loadTrack(index) {
-  if (isPlaying) {
-    audioPlayer.pause();
-    isPlaying = false;
-    playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Cambia a pausa quando si carica un nuovo brano
-  }
+      if (isPlaying) {
+        audioPlayer.pause();
+        isPlaying = false;
+        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Cambia a pausa quando si carica un nuovo brano
+      }
 
-  const track = tracks[index];
-  audioSource.src = track.src;
-  currentTrackTitle.textContent = track.title;
-  currentTrackArtist.textContent = track.artist;
-  currentTrackThumbnail.src = track.thumbnail;
-  audioPlayer.load();
-  updateDuration();
-  playPauseTrack(); // Inizializza la riproduzione del brano
-}
+      const track = tracks[index];
+      audioSource.src = track.src;
+      currentTrackTitle.textContent = track.title;
+      currentTrackArtist.textContent = track.artist;
+      currentTrackThumbnail.src = track.thumbnail;
+      audioPlayer.load();
+      updateDuration();
+      playPauseTrack(); // Inizializza la riproduzione del brano
+    }
 
-function playPauseTrack() {
-  if (isPlaying) {
-    audioPlayer.pause();
-    playPauseButton.innerHTML = '<i class="fas fa-play"></i>'; // Mostra play quando si mette in pausa
-  } else {
-    audioPlayer.play().catch(error => {
-      console.error("Error playing audio:", error);
-    });
-    playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Mostra pausa quando si riproduce
-  }
-  isPlaying = !isPlaying; // Inverti lo stato di riproduzione
-}
+    function playPauseTrack() {
+      if (isPlaying) {
+        audioPlayer.pause();
+        playPauseButton.innerHTML = '<i class="fas fa-play"></i>'; // Mostra play quando si mette in pausa
+      } else {
+        audioPlayer.play().catch(error => {
+          console.error("Error playing audio:", error);
+        });
+        playPauseButton.innerHTML = '<i class="fas fa-pause"></i>'; // Mostra pausa quando si riproduce
+      }
+      isPlaying = !isPlaying; // Inverti lo stato di riproduzione
+    }
 
     function updatePlayPauseButton() {
       const playButtons = document.querySelectorAll('.play-button');
@@ -465,7 +452,7 @@ function playPauseTrack() {
     document.getElementById('show-playlists-mobile').addEventListener('click', () => {
       document.getElementById('playlists').classList.add('active');
       document.getElementById('home').classList.remove('active');
-      document.getElementById('more-music').classList.remove(' active');
+      document.getElementById('more-music').classList.remove('active');
     });
 
     document.getElementById('show-more-music-mobile').addEventListener('click', () => {
