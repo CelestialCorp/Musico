@@ -8,50 +8,56 @@
     {
         "title": "On One Tonight",
         "artist": "Gunna",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/5i0GKTp8c1Q/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T174711Z&X-Amz-Expires=600&X-Amz-Signature=751cfccefd97f361ecfd4c637360b25f70f6b58226fe400878f7d2d58c7d668c&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Gunna%20-%20on%20one%20tonight%20%5BOfficial%20Visualizer%5D.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Gunna%20-%20on%20one%20tonight%20%5BOfficial%20Visualizer%5D.mp3",
         "thumbnail": "https://i.scdn.co/image/ab67616d0000b273c67636f3021f5869095c0fc5"
     },
     {
         "title": "Timeless",
         "artist": "The Weeknd, Playboi Carti",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/vK8OPU9POeY/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T200224Z&X-Amz-Expires=600&X-Amz-Signature=c8bef034a31d3ad008efa845c29130b0030638c2fafb2290f2f55b574ddee917&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22the%20weekend%20%26%20playboi%20carti%20-%20timeless%20%28slowed%20%2B%20reverb%29.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Timeless%20-%20The%20Weeknd%2C%20Playboi%20Carti%20%28Slowed%2BReverb%29.mp3",
         "thumbnail": "https://archive.org/download/the-weeknd-playboi-carti-timeless-official-audio/__ia_thumb.jpg"
     },
     {
         "title": "Redrum",
         "artist": "21 Savage",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/FzoUs57hBCc/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T180813Z&X-Amz-Expires=600&X-Amz-Signature=9804a4ee85687ccd6c31de99c3eb4add99439fc4e9add608d8afa3be4ca435d4&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%2221%20Savage%20-%20redrum%20%28Lyrics%29.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20-%20redrum%20%28nightcore%E2%A7%B8Sped%20up%29.mp3",
         "thumbnail": "https://th.bing.com/th/id/OIP.aLq5G_C6_fnrkJb-opn5UgHaHa?rs=1&pid=ImgDetMain"
     },
     {
         "title": "Jimmy Cooks",
         "artist": "Drake, 21 Savage",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/V7UgPHjN9qE/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T201007Z&X-Amz-Expires=600&X-Amz-Signature=89b591341f33e146d300a0759a8e79e5e7c909a0b3f784ffdfa0850077653d8b&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Drake%20-%20Jimmy%20Cooks%20ft.%2021%20Savage.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Drake%20-%20Jimmy%20Cooks%20%28sped%20up%29.mp3",
         "thumbnail": "https://hypeddit-gates-prod.s3.amazonaws.com/83v6uu_coverartmanual"
     },
     {
         "title": "What you know about love",
         "artist": "Pop Smoke",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/7Mzxotj6Gvs/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T202549Z&X-Amz-Expires=600&X-Amz-Signature=58f865d1cc43f7c8efe4b22c11ec357cfd4a81fc0b76570d209e56b02c374e61&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Pop%20Smoke%20-%20What%20You%20Know%20Bout%20Love.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/what%20you%20know%20bout%20love%20-%20pop%20smoke%20%28sped-up%20%2B%20reverb%29.mp3",
         "thumbnail": "https://th.bing.com/th/id/R.19fc2bb63818b00fe25539902eb93823?rik=x73Lp%2bNdSH%2bfnA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fen%2fthumb%2f1%2f1c%2fMoodswingsremixcover.jpg%2f220px-Moodswingsremixcover.jpg&ehk=iUHSl8oWCx4PhwqkNKZZNmCi7SsyuwxwXzptWLSfp7c%3d&risl=&pid=ImgRaw&r=0"
     },
     {
-        "title": "Runnin",
-        "artist": "21 Savage, Metro Boomin",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/fkYz2v7QL_g/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T201927Z&X-Amz-Expires=600&X-Amz-Signature=687df2d79bb7cb76093d59db8d6469106f6529bb4b8dbf2142e013f70fc9c05d&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%2221%20Savage%20x%20Metro%20Boomin%20-%20Runnin%20%5BSped%20Up%5D.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-        "thumbnail": "https://hiphop24x7.com/wp-content/uploads/2020/10/Stream-21-Savage-Metro-Boomins-New-Album-SAVAGE-MODE-II-Feat.-Drake-Young-Thug-More.jpg"
+        "title": "Not Responsible x Prince of Egypt x Love on me",
+        "artist": "Amon, Mofe, Jtbazz",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Not%20Responsible%20x%20Prince%20of%20Egypt%20x%20Love%20on%20me%20-Slowed-%20%5BAmon%20-%20Mofe%20-%20Jtbazz%5D%20-%20%28Remix%20-%20Rommy%29.mp3",
+        "thumbnail": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/82a0b7181634693.651f0ae932aa7.png"
     },
     {
-        "title": "FE!N",
-        "artist": "Travis Scott, Playboi Carti",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/B9synWjqBn8/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T181649Z&X-Amz-Expires=600&X-Amz-Signature=9ebc1bee0a75f6217090fbde66b14da12e7649e934be2ae5ffc5d744fda6e50f&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22Travis%20Scott%20-%20FE%21N%20ft.%20Playboi%20Carti.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
-        "thumbnail": "https://th.bing.com/th/id/OIP.1B_a5_3unY2ayJwjNqFzrAAAAA?rs=1&pid=ImgDetMain"
+        "title": "MONTAGEM LUNAR DIAMANTE X CRAZY STORY",
+        "artist": "King Von, DJ DYLANFK",    
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/KING%20VON%20X%20MONTAGEM%20LUNAR%20DIAMANTE%20%28REMIX%29%20%EF%BD%9C%20Tiktok%20version.mp3",
+        "thumbnail": "https://th.bing.com/th/id/OIP.rpwkUnlKfZst7dH5bUUdWQHaHa?rs=1&pid=ImgDetMain"
     },
     {
         "title": "Peligrosa",
         "artist": "Floyy Menor",
-        "src": "https://bucket.cdnframe.com/youtube-cdn-641c0024/LW5oQl0CxdQ/320.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=ocluVRWp7XwlXqW7CBxz%2F20250218%2Fnl-east-host02%2Fs3%2Faws4_request&X-Amz-Date=20250218T200427Z&X-Amz-Expires=600&X-Amz-Signature=ad548eccc64ca369aeefce7bcf9b8b23af1c47710e4e636d128064c882687527&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22FloyyMenor%20-%20Peligrosa%20%28Video%20Oficial%29.mp3%22&x-amz-checksum-mode=ENABLED&x-id=GetObject",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/PELIGROSA%20-%20FLOYYMENOR%20%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5%20%28SPEED%20UPSPED%20UP%29%20%5B%20ezmp3.cc%20%5D.mp3",
         "thumbnail": "https://th.bing.com/th/id/OIP.RxtfrUa85YKe01iO8TjFcwHaHa?rs=1&pid=ImgDetMain"
+    },
+    {
+        "title": "Empty Out Your Pockets",
+        "artist": "Juice WRLD",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Juice%20WRLD%20-%20Empty%20Out%20Your%20Pockets%20%28Official%20Fortnite%20Video%29.mp3",
+        "thumbnail": "https://th.bing.com/th/id/OIP.Z4sfpWBrDI-JGoW3uptIegHaHa?rs=1&pid=ImgDetMain"
     },
     {
         "title": "Rich Flex",
@@ -60,9 +66,15 @@
         "thumbnail": "https://archive.org/download/her-loss-24bit-flac/__ia_thumb.jpg"
     },
     {
+        "title": "FE!N",
+        "artist": "Travis Scott, Playboi Carti",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Travis%20Scott%20-%20FE%21N%20ft.%20Playboi%20Carti%20%5B%20ezmp3.cc%20%5D.mp3",
+        "thumbnail": "https://th.bing.com/th/id/OIP.1B_a5_3unY2ayJwjNqFzrAAAAA?rs=1&pid=ImgDetMain"
+    },
+    {
         "title": "Runnin",
         "artist": "21 Savage, Metro Boomin",
-        "src": "https://archive.org/download/01-21-savage-and-metro-boomin-intro/02%2021%20Savage%20and%20Metro%20Boomin-Runnin.mp3",
+        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20x%20Metro%20Boomin%20-%20Runnin%20%5BSped%20Up%5D.mp3",
         "thumbnail": "https://archive.org/download/21-savage-metro-boomin-savage-mode-2/__ia_thumb.jpg"
     },
     {
@@ -88,12 +100,6 @@
         "artist": "Jtbazz",
         "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Love%20on%20me%20-%20Jtbazz.mp3",
         "thumbnail": "https://th.bing.com/th/id/OIP.B7OtQBk7hup_eL6Mfr1uugAAAA?rs=1&pid=ImgDetMain"
-    },
-    {
-        "title": "Not Responsible x Prince of Egypt x Love on me",
-        "artist": "Amon, Mofe, Jtbazz",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Not%20Responsible%20x%20Prince%20of%20Egypt%20x%20Love%20on%20me%20-Slowed-%20%5BAmon%20-%20Mofe%20-%20Jtbazz%5D%20-%20%28Remix%20-%20Rommy%29.mp3",
-        "thumbnail": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/82a0b7181634693.651f0ae932aa7.png"
     },
     {
         "title": "Want Me!",
