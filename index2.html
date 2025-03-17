@@ -1,0 +1,109 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-100 font-roboto">
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold text-center mb-6">Music Player</h1>
+        
+        <div id="tracksContainer" class="space-y-6 mb-6">
+            <!-- Tracks will be dynamically inserted here -->
+        </div>
+
+        <div class="bg-white shadow-md rounded-lg p-6 mb-6">
+            <h2 class="text-2xl font-bold mb-4">Add New Track</h2>
+            <form id="trackForm" class="space-y-4">
+                <div>
+                    <label for="title" class="block text-gray-700">Title</label>
+                    <input type="text" id="title" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="artist" class="block text-gray-700">Artist</label>
+                    <input type="text" id="artist" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="src" class="block text-gray-700">Audio URL</label>
+                    <input type="url" id="src" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <div>
+                    <label for="thumbnail" class="block text-gray-700">Thumbnail URL</label>
+                    <input type="url" id="thumbnail" class="w-full p-2 border border-gray-300 rounded" required>
+                </div>
+                <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50">
+                    <i class="fas fa-plus mr-2"></i>Add Track
+                </button>
+            </form>
+        </div>
+
+        <button id="copyButton" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
+            <i class="fas fa-copy mr-2"></i>Copy JSON
+        </button>
+    </div>
+
+    <script>
+        let tracks = [];
+
+        async function fetchTracks() {
+            try {
+                const response = await fetch('tracks.json');
+                tracks = await response.json();
+                renderTracks(tracks);
+            } catch (error) {
+                console.error('Error fetching tracks:', error);
+            }
+        }
+
+        function renderTracks(tracks) {
+            const container = document.getElementById('tracksContainer');
+            container.innerHTML = '';
+            tracks.forEach(track => {
+                const trackElement = document.createElement('div');
+                trackElement.className = 'bg-white shadow-md rounded-lg p-6';
+                trackElement.innerHTML = `
+                    <div class="flex items-center mb-4">
+                        <img src="${track.thumbnail}" alt="Album cover of ${track.title} by ${track.artist}" class="w-16 h-16 rounded-full mr-4">
+                        <div>
+                            <h2 class="text-xl font-bold">${track.title}</h2>
+                            <p class="text-gray-600">${track.artist}</p>
+                        </div>
+                    </div>
+                    <audio controls class="w-full mb-4">
+                        <source src="${track.src}" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                `;
+                container.appendChild(trackElement);
+            });
+        }
+
+        document.getElementById('copyButton').addEventListener('click', () => {
+            const jsonStr = JSON.stringify(tracks, null, 2);
+            navigator.clipboard.writeText(jsonStr).then(() => {
+                alert('JSON copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy JSON: ', err);
+            });
+        });
+
+        document.getElementById('trackForm').addEventListener('submit', (event) => {
+            event.preventDefault();
+            const title = document.getElementById('title').value;
+            const artist = document.getElementById('artist').value;
+            const src = document.getElementById('src').value;
+            const thumbnail = document.getElementById('thumbnail').value;
+
+            const newTrack = { title, artist, src, thumbnail };
+            tracks.push(newTrack);
+
+            renderTracks(tracks);
+        });
+
+        document.addEventListener('DOMContentLoaded', fetchTracks);
+    </script>
+</body>
+</html>
