@@ -1,145 +1,176 @@
 [
     {
-        "title": "Ransom",
-        "artist": "Lil Tecca",
-        "src": "https://archive.org/download/y-2mate.com-lil-tecca-ransom-bass-boosted/y2mate.com%20-%20Lil%20Tecca%20%20Ransom%20Bass%20Boosted.mp3",
-        "thumbnail": "https://archive.org/download/cd_we-love-you-tecca_lil-tecca-juice-wrld/__ia_thumb.jpg"
-    },
-{
-  "title": "Montagem Renitch Diamante",
-  "artist": "DJ RaXz ,DJ LUCAS",  "src":"https://files.catbox.moe/7oa11e.mp3", "thumbnail":"https://files.catbox.moe/dfevpr.jpeg"
-},
-    {
-        "title": "Glock In My Lap",
-        "artist": "21 Savage, Metro Boomin",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20-%20Glock%20In%20My%20Lap%20%5Bsped%20up%5D.mp3",
-        "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDIyYmVkODktYjUwMS00MWJmLTgzMDQtMTU2ZWIzMDZjM2ZjXkEyXkFqcGc@._V1_QL75_UY190_CR92,0,190,190_.jpg"
+      "title": "Ransom",
+      "artist": "Lil Tecca",
+      "src": "https://archive.org/download/y-2mate.com-lil-tecca-ransom-bass-boosted/y2mate.com%20-%20Lil%20Tecca%20%20Ransom%20Bass%20Boosted.mp3",
+      "thumbnail": "https://archive.org/download/cd_we-love-you-tecca_lil-tecca-juice-wrld/__ia_thumb.jpg"
     },
     {
-        "title": "Adesaniya",
-        "artist": "Mowgli CLL",
-        "src": "https://res.cloudinary.com/dy4rsdmv0/video/upload/v1740476638/spotidownloader.com_-_Adesanya_-_Mowgli_CLL_bxlunk.mp3",
-        "thumbnail": "https://res.cloudinary.com/dy4rsdmv0/image/upload/v1740477225/ab67616d0000b2738d7a684de4e1197f43bcc966_ee9fhg.jpg"
+      "title": "Montagem Renitch Diamante",
+      "artist": "DJ RaXz ,DJ LUCAS",
+      "src": "https://files.catbox.moe/7oa11e.mp3",
+      "thumbnail": "https://files.catbox.moe/dfevpr.jpeg"
     },
     {
-        "title": "New Opp",
-        "artist": "Sha Gz",
-        "src": "https://res.cloudinary.com/dy4rsdmv0/video/upload/v1740475616/New_Opp_Sped_Up_wveq4x.mp3",
-        "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxQHutETIWkbVFT9OUe4SzxytGPg3Q_08ROg&s"
+      "title": "Glock In My Lap",
+      "artist": "21 Savage, Metro Boomin",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20-%20Glock%20In%20My%20Lap%20%5Bsped%20up%5D.mp3",
+      "thumbnail": "https://m.media-amazon.com/images/M/MV5BNDIyYmVkODktYjUwMS00MWJmLTgzMDQtMTU2ZWIzMDZjM2ZjXkEyXkFqcGc@._V1_QL75_UY190_CR92,0,190,190_.jpg"
     },
     {
-        "title": "On One Tonight",
-        "artist": "Gunna",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/on%20one%20tonight%20-%20Gunna%20%7BSped%20Up%7D%20%5B%20ezmp3.cc%20%5D.mp3",
-        "thumbnail": "https://i.scdn.co/image/ab67616d0000b273c67636f3021f5869095c0fc5"
+      "title": "Adesaniya",
+      "artist": "Mowgli CLL",
+      "src": "https://res.cloudinary.com/dy4rsdmv0/video/upload/v1740476638/spotidownloader.com_-_Adesanya_-_Mowgli_CLL_bxlunk.mp3",
+      "thumbnail": "https://res.cloudinary.com/dy4rsdmv0/image/upload/v1740477225/ab67616d0000b2738d7a684de4e1197f43bcc966_ee9fhg.jpg"
     },
     {
-        "title": "Timeless",
-        "artist": "The Weeknd, Playboi Carti",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Timeless%20-%20The%20Weeknd%2C%20Playboi%20Carti%20%28Slowed%2BReverb%29.mp3",
-        "thumbnail": "https://archive.org/download/the-weeknd-playboi-carti-timeless-official-audio/__ia_thumb.jpg"
+      "title": "New Opp",
+      "artist": "Sha Gz",
+      "src": "https://res.cloudinary.com/dy4rsdmv0/video/upload/v1740475616/New_Opp_Sped_Up_wveq4x.mp3",
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxQHutETIWkbVFT9OUe4SzxytGPg3Q_08ROg&s"
     },
     {
-        "title": "Redrum",
-        "artist": "21 Savage",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20-%20redrum%20%28nightcore%E2%A7%B8Sped%20up%29.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.aLq5G_C6_fnrkJb-opn5UgHaHa?rs=1&pid=ImgDetMain"
+      "title": "On One Tonight",
+      "artist": "Gunna",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/on%20one%20tonight%20-%20Gunna%20%7BSped%20Up%7D%20%5B%20ezmp3.cc%20%5D.mp3",
+      "thumbnail": "https://i.scdn.co/image/ab67616d0000b273c67636f3021f5869095c0fc5"
     },
     {
-        "title": "Jimmy Cooks",
-        "artist": "Drake, 21 Savage",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Drake%20-%20Jimmy%20Cooks%20%28sped%20up%29.mp3",
-        "thumbnail": "https://hypeddit-gates-prod.s3.amazonaws.com/83v6uu_coverartmanual"
+      "title": "Timeless",
+      "artist": "The Weeknd, Playboi Carti",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Timeless%20-%20The%20Weeknd%2C%20Playboi%20Carti%20%28Slowed%2BReverb%29.mp3",
+      "thumbnail": "https://archive.org/download/the-weeknd-playboi-carti-timeless-official-audio/__ia_thumb.jpg"
     },
     {
-        "title": "What you know about love",
-        "artist": "Pop Smoke",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/what%20you%20know%20bout%20love%20-%20pop%20smoke%20%28sped-up%20%2B%20reverb%29.mp3",
-        "thumbnail": "https://th.bing.com/th/id/R.19fc2bb63818b00fe25539902eb93823?rik=x73Lp%2bNdSH%2bfnA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fen%2fthumb%2f1%2f1c%2fMoodswingsremixcover.jpg%2f220px-Moodswingsremixcover.jpg&ehk=iUHSl8oWCx4PhwqkNKZZNmCi7SsyuwxwXzptWLSfp7c%3d&risl=&pid=ImgRaw&r=0"
+      "title": "Redrum",
+      "artist": "21 Savage",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20-%20redrum%20%28nightcore%E2%A7%B8Sped%20up%29.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.aLq5G_C6_fnrkJb-opn5UgHaHa?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "Not Responsible x Prince of Egypt x Love on me",
-        "artist": "Amon, Mofe, Jtbazz",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Not%20Responsible%20x%20Prince%20of%20Egypt%20x%20Love%20on%20me%20-Slowed-%20%5BAmon%20-%20Mofe%20-%20Jtbazz%5D%20-%20%28Remix%20-%20Rommy%29.mp3",
-        "thumbnail": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/82a0b7181634693.651f0ae932aa7.png"
+      "title": "Jimmy Cooks",
+      "artist": "Drake, 21 Savage",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Drake%20-%20Jimmy%20Cooks%20%28sped%20up%29.mp3",
+      "thumbnail": "https://hypeddit-gates-prod.s3.amazonaws.com/83v6uu_coverartmanual"
     },
     {
-        "title": "MONTAGEM LUNAR DIAMANTE X CRAZY STORY",
-        "artist": "King Von, DJ DYLANFK",    
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/KING%20VON%20X%20MONTAGEM%20LUNAR%20DIAMANTE%20%28REMIX%29%20%EF%BD%9C%20Tiktok%20version.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.rpwkUnlKfZst7dH5bUUdWQHaHa?rs=1&pid=ImgDetMain"
+      "title": "What you know about love",
+      "artist": "Pop Smoke",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/what%20you%20know%20bout%20love%20-%20pop%20smoke%20%28sped-up%20%2B%20reverb%29.mp3",
+      "thumbnail": "https://th.bing.com/th/id/R.19fc2bb63818b00fe25539902eb93823?rik=x73Lp%2bNdSH%2bfnA&riu=http%3a%2f%2fupload.wikimedia.org%2fwikipedia%2fen%2fthumb%2f1%2f1c%2fMoodswingsremixcover.jpg%2f220px-Moodswingsremixcover.jpg&ehk=iUHSl8oWCx4PhwqkNKZZNmCi7SsyuwxwXzptWLSfp7c%3d&risl=&pid=ImgRaw&r=0"
     },
     {
-        "title": "Peligrosa",
-        "artist": "Floyy Menor",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/PELIGROSA%20-%20FLOYYMENOR%20%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5%20%28SPEED%20UPSPED%20UP%29%20%5B%20ezmp3.cc%20%5D.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.RxtfrUa85YKe01iO8TjFcwHaHa?rs=1&pid=ImgDetMain"
+      "title": "Not Responsible x Prince of Egypt x Love on me",
+      "artist": "Amon, Mofe, Jtbazz",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Not%20Responsible%20x%20Prince%20of%20Egypt%20x%20Love%20on%20me%20-Slowed-%20%5BAmon%20-%20Mofe%20-%20Jtbazz%5D%20-%20%28Remix%20-%20Rommy%29.mp3",
+      "thumbnail": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/82a0b7181634693.651f0ae932aa7.png"
     },
     {
-        "title": "Empty Out Your Pockets",
-        "artist": "Juice WRLD",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Juice%20WRLD%20-%20Empty%20Out%20Your%20Pockets%20%28Official%20Fortnite%20Video%29.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.Z4sfpWBrDI-JGoW3uptIegHaHa?rs=1&pid=ImgDetMain"
+      "title": "MONTAGEM LUNAR DIAMANTE X CRAZY STORY",
+      "artist": "King Von, DJ DYLANFK",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/KING%20VON%20X%20MONTAGEM%20LUNAR%20DIAMANTE%20%28REMIX%29%20%EF%BD%9C%20Tiktok%20version.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.rpwkUnlKfZst7dH5bUUdWQHaHa?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "Rich Flex",
-        "artist": "21 Savage, Drake",
-        "src": "https://archive.org/download/drake-21-savage-rich-flex-audio_202305/Drake%2C%2021%20Savage%20-%20Rich%20Flex%20%28Audio%29.m4a",
-        "thumbnail": "https://archive.org/download/her-loss-24bit-flac/__ia_thumb.jpg"
+      "title": "Peligrosa",
+      "artist": "Floyy Menor",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/PELIGROSA%20-%20FLOYYMENOR%20%E2%9D%A4%EF%B8%8F_%F0%9F%94%A5%20%28SPEED%20UPSPED%20UP%29%20%5B%20ezmp3.cc%20%5D.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.RxtfrUa85YKe01iO8TjFcwHaHa?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "FE!N",
-        "artist": "Travis Scott, Playboi Carti",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Travis%20Scott%20-%20FE%21N%20ft.%20Playboi%20Carti%20%5B%20ezmp3.cc%20%5D.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.1B_a5_3unY2ayJwjNqFzrAAAAA?rs=1&pid=ImgDetMain"
+      "title": "Empty Out Your Pockets",
+      "artist": "Juice WRLD",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Juice%20WRLD%20-%20Empty%20Out%20Your%20Pockets%20%28Official%20Fortnite%20Video%29.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.Z4sfpWBrDI-JGoW3uptIegHaHa?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "Runnin",
-        "artist": "21 Savage, Metro Boomin",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20x%20Metro%20Boomin%20-%20Runnin%20%5BSped%20Up%5D.mp3",
-        "thumbnail": "https://archive.org/download/21-savage-metro-boomin-savage-mode-2/__ia_thumb.jpg"
+      "title": "Rich Flex",
+      "artist": "21 Savage, Drake",
+      "src": "https://archive.org/download/drake-21-savage-rich-flex-audio_202305/Drake%2C%2021%20Savage%20-%20Rich%20Flex%20%28Audio%29.m4a",
+      "thumbnail": "https://archive.org/download/her-loss-24bit-flac/__ia_thumb.jpg"
     },
     {
-        "title": "Gata Only",
-        "artist": "Floyy Menor, Cris MJ",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/FloyyMenor%20FT%20Cris%20MJ%20-%20GATA%20ONLY%20%28Audio%20Official%29%20%EF%BD%9C%20EL%20COMIENZO.mp3",
-        "thumbnail": "https://images.genius.com/3c4ec6454541f55cb0d3ab1875a71148.1000x1000x1.png"
+      "title": "FE!N",
+      "artist": "Travis Scott, Playboi Carti",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Travis%20Scott%20-%20FE%21N%20ft.%20Playboi%20Carti%20%5B%20ezmp3.cc%20%5D.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.1B_a5_3unY2ayJwjNqFzrAAAAA?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "Chica Atractiva",
-        "artist": "Floyy Menor",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/FLOYYMENOR%20-%20CHICA%20ATRACTIVA.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.IRT9OE8lM0dQAqdD5X90TgHaFj?rs=1&pid=ImgDetMain"
+      "title": "Runnin",
+      "artist": "21 Savage, Metro Boomin",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/21%20Savage%20x%20Metro%20Boomin%20-%20Runnin%20%5BSped%20Up%5D.mp3",
+      "thumbnail": "https://archive.org/download/21-savage-metro-boomin-savage-mode-2/__ia_thumb.jpg"
     },
     {
-        "title": "Si No Es Contigo",
-        "artist": "Cris MJ",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Cris%20MJ%20-%20SI%20NO%20ES%20CONTIGO%20%28SPEED%20UP%29.mp3",
-        "thumbnail": "https://images.genius.com/61d46c92f093c8cbccbdac98a355f6a4.1000x1000x1.png"
+      "title": "Gata Only",
+      "artist": "Floyy Menor, Cris MJ",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/FloyyMenor%20FT%20Cris%20MJ%20-%20GATA%20ONLY%20%28Audio%20Official%29%20%EF%BD%9C%20EL%20COMIENZO.mp3",
+      "thumbnail": "https://images.genius.com/3c4ec6454541f55cb0d3ab1875a71148.1000x1000x1.png"
     },
     {
-        "title": "Love on me",
-        "artist": "Jtbazz",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Love%20on%20me%20-%20Jtbazz.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.B7OtQBk7hup_eL6Mfr1uugAAAA?rs=1&pid=ImgDetMain"
+      "title": "Chica Atractiva",
+      "artist": "Floyy Menor",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/FLOYYMENOR%20-%20CHICA%20ATRACTIVA.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.IRT9OE8lM0dQAqdD5X90TgHaFj?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "Want Me!",
-        "artist": "Cl3pers",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/cl4pers%20-%20Want%20Me%21%20%5BDir.%20by%20%40DotComNirvan%5D.mp3",
-        "thumbnail": "https://images.genius.com/10a3cef548b4c89ab5d6a97500fd5459.300x294x1.jpg"
+      "title": "Si No Es Contigo",
+      "artist": "Cris MJ",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Cris%20MJ%20-%20SI%20NO%20ES%20CONTIGO%20%28SPEED%20UP%29.mp3",
+      "thumbnail": "https://images.genius.com/61d46c92f093c8cbccbdac98a355f6a4.1000x1000x1.png"
     },
     {
-        "title": "Prince of Egypt",
-        "artist": ".Mofe",
-        "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/mofe.%20-%20%F0%9D%99%A5%F0%9D%99%A7%F0%9D%99%9E%F0%9D%99%A3%F0%9D%99%98%F0%9D%99%9A%20%F0%9D%99%A4%F0%9D%99%9B%20%F0%9D%99%9A%F0%9D%99%9C%F0%9D%99%AE%F0%9D%99%A5%F0%9D%99%A9%20%28nightcore_sped%20up%29%20%5BhvTwmXe--2g%5D.mp3",
-        "thumbnail": "https://th.bing.com/th/id/OIP.rhA03VC-JihDw5L7eBdgogHaHa?rs=1&pid=ImgDetMain"
+      "title": "Love on me",
+      "artist": "Jtbazz",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/Love%20on%20me%20-%20Jtbazz.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.B7OtQBk7hup_eL6Mfr1uugAAAA?rs=1&pid=ImgDetMain"
     },
     {
-        "title": "Wasted",
-        "artist": "Juice WRLD, Lil Uzi Vert",
-        "src": "https://archive.org/download/JuiceWRLDLilUziVertWastedLyrics/Juice%20WRLD%2C%20Lil%20Uzi%20Vert%20-%20Wasted%20%28Lyrics%29.mp3",
-        "thumbnail": "https://archive.org/download/juice-wrld-goodbye-and-good-riddance-5-year-anniversary-edition/__ia_thumb.jpg"
+      "title": "Want Me!",
+      "artist": "Cl3pers",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/cl4pers%20-%20Want%20Me%21%20%5BDir.%20by%20%40DotComNirvan%5D.mp3",
+      "thumbnail": "https://images.genius.com/10a3cef548b4c89ab5d6a97500fd5459.300x294x1.jpg"
+    },
+    {
+      "title": "Prince of Egypt",
+      "artist": ".Mofe",
+      "src": "https://archive.org/download/floyy-menor-ft-cris-mj-gata-only-audio-official-el-comienzo/mofe.%20-%20%F0%9D%99%A5%F0%9D%99%A7%F0%9D%99%9E%F0%9D%99%A3%F0%9D%99%98%F0%9D%99%9A%20%F0%9D%99%A4%F0%9D%99%9B%20%F0%9D%99%9A%F0%9D%99%9C%F0%9D%99%AE%F0%9D%99%A5%F0%9D%99%A9%20%28nightcore_sped%20up%29%20%5BhvTwmXe--2g%5D.mp3",
+      "thumbnail": "https://th.bing.com/th/id/OIP.rhA03VC-JihDw5L7eBdgogHaHa?rs=1&pid=ImgDetMain"
+    },
+    {
+      "title": "Wasted",
+      "artist": "Juice WRLD, Lil Uzi Vert",
+      "src": "https://archive.org/download/JuiceWRLDLilUziVertWastedLyrics/Juice%20WRLD%2C%20Lil%20Uzi%20Vert%20-%20Wasted%20%28Lyrics%29.mp3",
+      "thumbnail": "https://archive.org/download/juice-wrld-goodbye-and-good-riddance-5-year-anniversary-edition/__ia_thumb.jpg"
+    },
+    {
+      "title": "Soak City (Do It)",
+      "artist": "310babii",
+      "src": "https://files.catbox.moe/9q3fx6.mp3",
+      "thumbnail": "https://musicchartsarchive.com/sites/default/files/singles/310babii--soak-city-do-it.jpg"
+    },
+    {
+      "title": "MODA",
+      "artist": "Nebrugg",
+      "src": "https://files.catbox.moe/4z7n5h.mp3",
+      "thumbnail": "https://i.scdn.co/image/ab67616d0000b27368a4cab18c900da77ac2e014"
+    },
+    {
+      "title": "Go Stupid",
+      "artist": "Polo G, Stunna 4 Vegas, NLG Choppa",
+      "src": "https://files.catbox.moe/0u89cy.mp3",
+      "thumbnail": "https://testitradotti.wikitesti.com/wp-content/uploads/2020/05/go-stupid-polo-g-e-stunna-4-vegas-feat-nle-choppa-traduzione-in-italiano.png"
+    },
+    {
+      "title": "20 Min",
+      "artist": "Lil Uzi Vert",
+      "src": "https://files.catbox.moe/29zm2x.mp3",
+      "thumbnail": "https://i.ytimg.com/vi/Ek0XFurOk7I/hqdefault.jpg"
+    },
+    {
+      "title": "PARANOIA // CLAP",
+      "artist": "Mish",
+      "src": "https://files.catbox.moe/r7rhg8.mp3",
+      "thumbnail": "https://files.catbox.moe/rgavu4.jpeg"
     }
-]
-
+  ]
